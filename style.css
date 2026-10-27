@@ -1,3 +1,21 @@
+/*
+  საიტი: MotoWorld — საიტი მოტოციკლების ტიპების, ისტორიისა და აღჭურვილობის შესახებ
+  ფაილი: style.css
+
+  გამოყენებული ფონტები:
+  1. MyGeorgian (Noto Sans Georgian) — ლოკალური ფონტი, ჩართულია @font-face-ით
+     (ფაილი: fonts/NotoSansGeorgian-Regular.woff2), გამოიყენება body-ზე
+  2. Noto Serif Georgian — Google Fonts-ის ბმულით (index.html-ის <head>-ში),
+     გამოიყენება h1 სათაურზე
+*/
+
+
+/* ==========================================================
+   ზოგადი სტილები
+   ფონტის ჩართვა, გვერდის ფონი, ტექსტი, სათაურები, ბმულები, ღილაკები
+   ========================================================== */
+
+/* ლოკალური ფონტის ჩართვა */
 @font-face {
   font-family: "MyGeorgian";
   src: url("fonts/NotoSansGeorgian-Regular.woff2") format("woff2");
@@ -36,11 +54,16 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
+/* h1 — ცალკე ფონტი Google Fonts-იდან (წესი h1, h2, h3-ის შემდეგაა, რომ არ გადაიფაროს) */
+h1 {
+  font-family: "Noto Serif Georgian", Georgia, serif;
+}
+
 /* მთავარი სათაური (hero-ში) */
 .hero h2 {
   font-size: 48px;
   line-height: 1.1;
-}   
+}
 
 /* ნაწილების სათაურები */
 h2 {
@@ -55,7 +78,7 @@ h3 {
 }
 
 /* ----- აბზაცები ----- */
-p { 
+p {
   color: #C7CDD1;
   font-size: 16px;
   font-weight: 400;
@@ -71,7 +94,39 @@ a {
   text-decoration: underline;
 }
 
-/* ----- header ----- */
+/* ----- ღილაკები ----- */
+.btn {
+  display: inline-block;
+  background-color: #F26A21;
+  color: #101418;
+  border: none;
+  padding: 12px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----- გამოსაყოფი ტექსტი (წლები და @motoworld) ----- */
+.year, .highlight {
+  color: #F26A21;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+
+/* ==========================================================
+   ჰედერი
+   ლოგო და სლოგანი
+   ========================================================== */
+
 .siteHeader {
   padding: 24px;
 }
@@ -92,7 +147,12 @@ a {
   margin: 4px 0 16px;
 }
 
-/* ----- მენიუ ----- */
+
+/* ==========================================================
+   მენიუ
+   ნავიგაციის ბმულები
+   ========================================================== */
+
 .mainNav > ul {
   margin: 0;
   padding: 0;
@@ -114,7 +174,12 @@ a {
   text-decoration: none;
 }
 
-/* ----- main ----- */
+
+/* ==========================================================
+   მთავარი ნაწილი
+   hero, მოტოციკლების ბარათები, ისტორია, რჩევის ბლოკი
+   ========================================================== */
+
 main {
   padding: 0 24px;
 }
@@ -123,7 +188,7 @@ section {
   margin-bottom: 48px;
 }
 
-/* მთავარი სურათი */
+/* ----- მთავარი სურათი ----- */
 .heroImg {
   width: 100%;
   max-width: 800px;
@@ -131,24 +196,6 @@ section {
   object-fit: cover;
   object-position: center 60%;
   margin: 24px 0;
-}
-
-/* ----- ღილაკები ----- */
-.btn {
-  display: inline-block;
-  background-color: #F26A21;
-  color: #101418;
-  border: none;
-  padding: 12px 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.3px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* ----- ბარათები (CSS Grid) ----- */
@@ -174,15 +221,6 @@ section {
   margin-bottom: 8px;
 }
 
-/* ----- გამოსაყოფი ტექსტი (წლები და @motoworld) ----- */
-.year, .highlight {
-  color: #F26A21;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0.2px;
-}
-
 /* ----- რჩევის ბლოკი ----- */
 .tip {
   background-color: #1B2329;
@@ -203,7 +241,12 @@ section {
   margin-bottom: 0;
 }
 
-/* ----- footer ----- */
+
+/* ==========================================================
+   ფუთერი
+   კონტაქტი და საავტორო უფლებები
+   ========================================================== */
+
 .siteFooter {
   background-color: #0B0E11;
   color: #AEB6BB;
@@ -233,7 +276,12 @@ section {
   font-weight: 400;
 }
 
-/* ===== Responsive ===== */
+
+/* ==========================================================
+   Responsive
+   პატარა ეკრანებისთვის (მობილური, 700px-მდე)
+   ========================================================== */
+
 @media (max-width: 700px) {
   .hero h2 {
     font-size: 32px;
