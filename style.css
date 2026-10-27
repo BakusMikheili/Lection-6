@@ -4,7 +4,8 @@
 
   გამოყენებული ფონტები:
   1. MyGeorgian (Noto Sans Georgian) — ლოკალური ფონტი, ჩართულია @font-face-ით
-     (ფაილი: fonts/NotoSansGeorgian-Regular.woff2), გამოიყენება body-ზე
+     (ფაილი: fonts/NotoSansGeorgian-Regular.ttf), გამოიყენება body-ზე და
+     მემკვიდრეობით h2/h3 სათაურებზე, აბზაცებზე, ბმულებსა და სიებზე
   2. Noto Serif Georgian — Google Fonts-ის ბმულით (index.html-ის <head>-ში),
      გამოიყენება h1 სათაურზე
 */
@@ -15,7 +16,8 @@
    ფონტის ჩართვა, გვერდის ფონი, ტექსტი, სათაურები, ბმულები, ღილაკები
    ========================================================== */
 
-/* ლოკალური ფონტის ჩართვა */
+/* ლოკალური ფონტის ჩართვა
+   ფაილი .ttf-ია, ამიტომ format() მინიშნება არის "truetype" */
 @font-face {
   font-family: "MyGeorgian";
   src: url("fonts/NotoSansGeorgian-Regular.ttf") format("truetype");
@@ -42,10 +44,11 @@ img {
   display: block;
 }
 
-/* ----- სათაურები ----- */
+/* ----- სათაურები -----
+   font-family აქ არ არის მითითებული: h2 და h3 იღებენ body-ს ფონტს
+   (MyGeorgian) მემკვიდრეობით, ამიტომ ქართული ასოები ყველგან ერთნაირად გამოჩნდება */
 h1, h2, h3 {
   color: #F5F5F2;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0;
@@ -54,12 +57,15 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-/* h1 — ცალკე ფონტი Google Fonts-იდან (წესი h1, h2, h3-ის შემდეგაა, რომ არ გადაიფაროს) */
+/* h1 — ცალკე ფონტი Google Fonts-იდან.
+   h1 და h1, h2, h3 ერთნაირი specificity-ისაა, ამიტომ გადამწყვეტია წესების რიგი */
 h1 {
   font-family: "Noto Serif Georgian", Georgia, serif;
 }
 
-/* მთავარი სათაური (hero-ში) */
+/* მთავარი სათაური (hero-ში)
+   .hero h2 უფრო მაღალი specificity-ისაა, ვიდრე h2, ამიტომ იმარჯვებს
+   მაშინაც, როცა საერთო h2 წესამდეა დაწერილი */
 .hero h2 {
   font-size: 48px;
   line-height: 1.1;
@@ -77,13 +83,8 @@ h3 {
   line-height: 1.2;
 }
 
-/* ----- აბზაცები ----- */
-p {
-  color: #C7CDD1;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-}
+/* აბზაცებს ფერი, ზომა, წონა და line-height body-დან მემკვიდრეობით გადაეცემათ,
+   ამიტომ ცალკე წესი p-ზე საჭირო აღარ არის */
 
 /* ----- ჩვეულებრივი ბმულები ----- */
 a {
@@ -269,8 +270,9 @@ section {
   text-decoration: underline;
 }
 
-/* footer-ის ბოლო აბზაცი — საავტორო უფლებები */
-.siteFooter p:last-child {
+/* საავტორო უფლებების ტექსტი — ცალკე კლასით, რომ footer-ში ახალი აბზაცის
+   დამატებამ სტილი არ გადაინაცვლოს (.siteFooter .copyright უფრო ძლიერია, ვიდრე .siteFooter > p) */
+.siteFooter .copyright {
   color: #7E898F;
   font-size: 13px;
   font-weight: 400;

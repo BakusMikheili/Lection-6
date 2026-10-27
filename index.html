@@ -44,7 +44,8 @@
     <section id="types" class="types">
       <h2>მოტოციკლების ტიპები</h2>
 
-      <!-- div აქ საჭიროა, რომ ბარათები ერთად დავაჯგუფო და მერე CSS Grid-ით დავაწყო -->
+      <!-- div არის wrapper: ის აჯგუფებს მხოლოდ ბარათებს, ამიტომ display: grid მას ეძლევა
+           და სექციის სათაური (h2) Grid-ის ბარათად არ იქცევა -->
       <div class="cardList">
 
         <article class="card">
@@ -114,7 +115,7 @@
     <h3>კონტაქტი</h3>
     <p>ელფოსტა: <a href="mailto:info@motoworld.example">info@motoworld.example</a></p>
     <p>ჩვენ სოციალურ ქსელებში: <span class="highlight">@motoworld</span></p>
-    <p>© 2026 MotoWorld. ყველა უფლება დაცულია.</p>
+    <p class="copyright">© 2026 MotoWorld. ყველა უფლება დაცულია.</p>
   </footer>
 
 </body>
