@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MotoWorld — საიტი მოტოციკლების ტიპების, ისტორიისა და აღჭურვილობის შესახებ">
+    <title>MotoWorld — მოტოციკლების სამყარო</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="siteHeader">
+    <h1 class="logo"><a href="#">MotoWorld</a></h1>
+    <p class="slogan">ყველაფერი მოტოციკლებზე ერთ სივრცეში</p>
+
+    <nav class="mainNav">
+      <ul>
+        <li><a href="#types">მოტოციკლების ტიპები</a></li>
+        <li><a href="#history">ისტორია</a></li>
+        <li><a href="#gear">აღჭურვილობა</a></li>
+        <li><a href="#contacts">კონტაქტი</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h2>იგრძენი თავისუფლება ორ ბორბალზე</h2>
+      <p>
+        მოტოციკლი უბრალოდ ტრანსპორტი არ არის, ეს მთელი ცხოვრების წესია.
+        ჩვენს საიტზე გაიგებ, როგორი მოტოციკლები არსებობს, როგორ გაჩნდა ისინი
+        და რა გჭირდება უსაფრთხო მგზავრობისთვის.
+      </p>
+      <img class="heroImg" src="images/hero.jpg" alt="მოტოციკლისტი გზაზე მზის ჩასვლისას">
+      <a class="btn btnMain" href="#types">გაიგე მეტი</a>
+    </section>
+
+    <section id="types" class="types">
+      <h2>მოტოციკლების ტიპები</h2>
+
+      <!-- div აქ საჭიროა, რომ ბარათები ერთად დავაჯგუფო და მერე CSS Grid-ით დავაწყო -->
+      <div class="cardList">
+
+        <article class="card">
+          <img src="images/sportbike.jpg" alt="სპორტული მოტოციკლი">
+          <h3>სპორტბაიკი</h3>
+          <p>სწრაფი და მსუბუქი მოტოციკლები ტრასაზე მაღალი სიჩქარით სასვლელად. პოზა დახრილია, ხოლო ობტეკატელები ჰაერის წინააღმდეგობას ამცირებს.</p>
+          <button class="btn">დეტალურად</button>
+        </article>
+
+        <article class="card">
+          <img src="images/cruiser.jpg" alt="კრუიზერის ტიპის მოტოციკლი">
+          <h3>კრუიზერი</h3>
+          <p>კომფორტული მოტოციკლები გრძელი მგზავრობისთვის. დაბალი სავარძელი, ძლიერი ძრავის ხმა და კლასიკური იერი.</p>
+          <button class="btn">დეტალურად</button>
+        </article>
+
+        <article class="card">
+          <img src="images/enduro.jpg" alt="ენდურო მოტოციკლი უგზოობაზე">
+          <h3>ენდურო</h3>
+          <p>მოტოციკლები უგზოობისთვის: ტალახი, ქვიშა, მთები. მათ აქვთ მაღალი საკიდარი და დიდი ბორბლები.</p>
+          <button class="btn">დეტალურად</button>
+        </article>
+
+        <article class="card">
+          <img src="images/scooter.jpg" alt="ქალაქის სკუტერი">
+          <h3>სკუტერი</h3>
+          <p>მსუბუქი და ეკონომიური ტრანსპორტი ქალაქისთვის. კარგია დამწყებებისთვის, რადგან სიჩქარეების გადართვა არ არის საჭირო.</p>
+          <button class="btn">დეტალურად</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="history" class="history">
+      <h2>მოკლე ისტორია</h2>
+      <p>პირველი მოტოციკლი 1885 წელს გაჩნდა. მისი შემქმნელი გერმანელი გამომგონებელი გოტლიბ დაიმლერი იყო. ის ხისგან იყო დამზადებული და პატარა ბენზინის ძრავით მოძრაობდა.</p>
+
+      <h3>მნიშვნელოვანი თარიღები</h3>
+      <ul class="dateList">
+        <li><span class="year">1885</span> — დაიმლერის პირველი მოტოციკლი</li>
+        <li><span class="year">1903</span> — დაარსდა Harley-Davidson</li>
+        <li><span class="year">1949</span> — Honda-მ გამოუშვა პირველი მოტოციკლი</li>
+        <li><span class="year">1970-იანი</span> — იაპონური მოტოციკლები მსოფლიოს იპყრობენ</li>
+      </ul>
+    </section>
+
+    <section id="gear" class="gear">
+      <h2>მოტოციკლისტის აღჭურვილობა</h2>
+      <p>უსაფრთხოება პირველ რიგში. გასვლამდე დარწმუნდი, რომ გაქვს:</p>
+      <ol>
+        <li>ჩაფხუტი (სასურველია ინტეგრალი)</li>
+        <li>დაცვით აღჭურვილი მოტოქურთუკი</li>
+        <li>ხელთათმანები</li>
+        <li>მოტოფეხსაცმელი</li>
+        <li>მოტოშარვალი</li>
+      </ol>
+    </section>
+
+    <aside class="tip">
+      <h3>რჩევა დამწყებს</h3>
+      <p>ნუ დაიწყებ მაშინვე ძლიერი მოტოციკლით. უმჯობესია, ჯერ 400 კუბამდე მსუბუქი მოტოციკლით იარო და გამოცდილება მიიღო.</p>
+    </aside>
+
+  </main>
+
+  <footer id="contacts" class="siteFooter">
+    <h3>კონტაქტი</h3>
+    <p>ელფოსტა: <a href="mailto:info@motoworld.example">info@motoworld.example</a></p>
+    <p>ჩვენ სოციალურ ქსელებში: <span class="highlight">@motoworld</span></p>
+    <p>© 2026 MotoWorld. ყველა უფლება დაცულია.</p>
+  </footer>
+
+</body>
+</html>

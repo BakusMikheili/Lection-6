@@ -1,0 +1,253 @@
+/* ----- გვერდის ფონი და ძირითადი ტექსტი ----- */
+body {
+  margin: 0;
+  background-color: #101418;
+  color: #C7CDD1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ----- სათაურები ----- */
+h1, h2, h3 {
+  color: #F5F5F2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+}
+
+/* მთავარი სათაური (hero-ში) */
+.hero h2 {
+  font-size: 48px;
+  line-height: 1.1;
+}   
+
+/* ნაწილების სათაურები */
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+/* ქვესათაურები (ბარათები, თარიღები, footer) */
+h3 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* ----- აბზაცები ----- */
+p { 
+  color: #C7CDD1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ----- ჩვეულებრივი ბმულები ----- */
+a {
+  color: #F26A21;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: underline;
+}
+
+/* ----- header ----- */
+.siteHeader {
+  padding: 24px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.logo a {
+  color: #F5F5F2;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.slogan {
+  margin: 4px 0 16px;
+}
+
+/* ----- მენიუ ----- */
+.mainNav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mainNav li {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.mainNav a {
+  color: #F5F5F2;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* ----- main ----- */
+main {
+  padding: 0 24px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+/* მთავარი სურათი */
+.heroImg {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center 60%;
+  margin: 24px 0;
+}
+
+/* ----- ღილაკები ----- */
+.btn {
+  display: inline-block;
+  background-color: #F26A21;
+  color: #101418;
+  border: none;
+  padding: 12px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----- ბარათები (CSS Grid) ----- */
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ----- თარიღების სია ----- */
+.dateList {
+  list-style: none;
+  padding: 0;
+}
+
+.dateList li {
+  margin-bottom: 8px;
+}
+
+/* ----- გამოსაყოფი ტექსტი (წლები და @motoworld) ----- */
+.year, .highlight {
+  color: #F26A21;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+/* ----- რჩევის ბლოკი ----- */
+.tip {
+  background-color: #1B2329;
+  color: #E3E7E9;
+  padding: 20px;
+  margin-bottom: 48px;
+}
+
+.tip h3 {
+  color: #F26A21;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.tip p {
+  color: #E3E7E9;
+  margin-bottom: 0;
+}
+
+/* ----- footer ----- */
+.siteFooter {
+  background-color: #0B0E11;
+  color: #AEB6BB;
+  padding: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.siteFooter > p {
+  color: #AEB6BB;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.siteFooter a {
+  color: #F26A21;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* footer-ის ბოლო აბზაცი — საავტორო უფლებები */
+.siteFooter p:last-child {
+  color: #7E898F;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .mainNav li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .heroImg {
+    height: 260px;
+  }
+
+  .cardList {
+    grid-template-columns: 1fr;
+  }
+
+  main,
+  .siteHeader,
+  .siteFooter {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
