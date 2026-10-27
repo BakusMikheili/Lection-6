@@ -18,7 +18,7 @@
 /* ლოკალური ფონტის ჩართვა */
 @font-face {
   font-family: "MyGeorgian";
-  src: url("fonts/NotoSansGeorgian-Regular.woff2") format("woff2");
+  src: url("fonts/NotoSansGeorgian-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
